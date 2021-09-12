@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        function ProductEs5(name, price) {
+            this.name = name;
+            this.price = price;
+        };
+
+        ProductEs5.prototype.make25PerceentDiscount = function () {
+            this.price = this.price * 0,85;
+        };
+
+        const productEs5 = new ProductEs5('goods1', 750)
+        productEs5.make25PerceentDiscount()
+
+        alert(productEs5);
+
+    </script>
+</body>
+</html>

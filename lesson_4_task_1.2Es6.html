@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        class Post {
+            constructor(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+            };
+
+        edit(text) {
+            this.text = text;
+            };
+        }    
+
+
+        const UserPost = new Post('User_Name', 'First post', '16/05/2009') ;
+        alert(UserPost);
+        UserPost.edit('Second post');
+        alert(UserPost);
+
+        class AttachedPost {
+            constructor(author, text, date) {
+            super(author, text, date)
+            this.highlited = false;
+            };
+
+        MakeTextHighlighted() {
+            this.highlited = true
+            };
+        }
+        
+        const NewAttachedPost = new AttachedPost('New_User_Name', 'First post', '16/05/2009') ;
+        alert(AttachedPost);
+        AttachedPost.MakeTextHighlighted();
+        AttachedPost.edit('Second post');
+        alert(AttachedPost);
+
+
+
+    </script>
+</body>
+</html>
